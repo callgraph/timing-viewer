@@ -1,0 +1,40 @@
+create table linux_3_5_4_R_x86_64_FDLIST(
+f_name VARCHAR(70),
+f_dfile VARCHAR(150),
+f_dline INT,
+f_rline INT,
+f_saddress VARCHAR(20),
+f_eaddress VARCHAR(20),
+f_id INT PRIMARY KEY AUTO_INCREMENT,
+INDEX(f_name,f_dfile)
+); 
+
+create table linux_3_5_4_R_x86_64_DLIST(
+F_point INT,
+C_point INT,
+C_id VARCHAR(20),
+Cd_address VARCHAR(20),
+PID VARCHAR(15),
+TID VARCHAR(15),
+C_time VARCHAR(15),
+R_time VARCHAR(15),
+RunTime INT,
+DLIST_id INT PRIMARY KEY AUTO_INCREMENT,
+INDEX(F_point,C_point),
+INDEX(C_point),
+INDEX(C_time,R_time),
+INDEX(R_time)
+);
+
+
+insert into linux_3_5_4_R_x86_64_FDLIST values('aaa','home/pwd',1,2,'0x12345','0x67890',1);
+insert into linux_3_5_4_R_x86_64_FDLIST values('bbb','home/pwd',1,2,'0x12345','0x67890',2);
+insert into linux_3_5_4_R_x86_64_FDLIST values('ccc','home/pwd',1,2,'0x12345','0x67890',3);
+insert into linux_3_5_4_R_x86_64_FDLIST values('ddd','home/pwd',1,2,'0x12345','0x67890',4);
+insert into linux_3_5_4_R_x86_64_FDLIST values('eee','home/pwd',1,2,'0x12345','0x67890',5); 
+
+
+insert into linux_3_5_4_R_x86_64_DLIST values(1,2,'','',80,80,'1','2',1,1);
+insert into linux_3_5_4_R_x86_64_DLIST values(2,3,'','',80,80,'2','3',1,2);
+insert into linux_3_5_4_R_x86_64_DLIST values(3,4,'','',80,80,'3','4',1,3);
+insert into linux_3_5_4_R_x86_64_DLIST values(4,5,'','',80,80,'4','5',1,4);
